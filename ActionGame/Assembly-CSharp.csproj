@@ -53,6 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\GunAim.cs" />
+     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\GunShoot.cs" />
+     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+     <Compile Include="Assets\Effect\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\AttackArea.cs" />
      <Compile Include="Assets\Scripts\AttackAreaActivator.cs" />
      <Compile Include="Assets\Scripts\CharaAnimation.cs" />
@@ -64,6 +72,7 @@
      <Compile Include="Assets\Scripts\InputManager.cs" />
      <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
      <Compile Include="Assets\Scripts\SearchArea.cs" />
+     <None Include="Assets\Effect\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/Unity3DActionGame/ActionGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: polySurface4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Item_Green
+    second: {fileID: 2100000, guid: 542a9e91034c14a68b036d211b1d0d8a, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

@@ -10,9 +10,9 @@ public class InputManager : MonoBehaviour {
 	bool moved = false;
 	bool jumpstate=false;
 	void Update(){
+		
 		// 스페이스 바 눌림
 		if(Input.GetKeyDown(KeyCode.Space)){
-			//Debug.Log("스페이스 바");
 			jumpstate = true;
 		}
 
