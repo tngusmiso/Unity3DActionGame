@@ -8,8 +8,7 @@ public class InputManager : MonoBehaviour {
 	Vector2 prevPosition;
 	Vector2 delta = Vector2.zero;
 	bool moved = false;
-	bool jumpstate = false;
-
+	bool jumpstate=false;
 	void Update(){
 		// 스페이스 바 눌림
 		if(Input.GetKeyDown(KeyCode.Space)){
@@ -55,6 +54,7 @@ public class InputManager : MonoBehaviour {
 	public bool isSpaced(){
 		bool jump = jumpstate;
 		jumpstate = false;
+		
 		return jump;
 	}
 

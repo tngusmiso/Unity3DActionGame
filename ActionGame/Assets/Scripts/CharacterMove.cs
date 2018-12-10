@@ -27,15 +27,8 @@ public class CharacterMove : MonoBehaviour
     public Vector3 destination;
     // 이동 속도
     public float walkSpeed = 6.0f;
-    // 점프 속도
-    public float jumpSpeed = 5f;
     // 회전 속도
     public float rotationSpeed = 360.0f;
-    Rigidbody rb;
-
-    void Awake(){
-        rb = GameObject.Find("Player").GetComponent<Rigidbody>();
-    }
     void Start(){
         characterController = GetComponent<CharacterController>();
         status = GetComponent<CharacterStatus>();
@@ -99,8 +92,10 @@ public class CharacterMove : MonoBehaviour
         // 땅에 닿아 있다면 지면을 꽉 누른다.
         // (유니티의 CharacterController 특성 때문에)
         Vector3 snapGround = Vector3.zero;
-        // if (characterController.isGrounded&&!status.jumping)
-        //     snapGround = Vector3.down;
+        if (characterController.isGrounded)
+            snapGround = Vector3.down;
+
+        // if(status.jumping) Jump();
 
         // CharacterController를 사용해서 움직인다.
         characterController.Move(velocity * Time.deltaTime + snapGround); // finally player moved
@@ -130,10 +125,6 @@ public class CharacterMove : MonoBehaviour
     public void StopMove(){
         // 현재 지점을 목적지로 한다.
         destination = transform.position;
-    }
-
-    public void Jump(){
-        rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse); 
     }
 
     // 목적지에 도착했는지 조사한다.

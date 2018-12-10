@@ -114,7 +114,7 @@ ModelImporter:
       name: Jump
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 97
+      lastFrame: 71
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -124,7 +124,7 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -134,7 +134,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.7248168
+      - time: 0.6212454
         functionName: EndJump
         data: 
         objectReferenceParameter: {instanceID: 0}
