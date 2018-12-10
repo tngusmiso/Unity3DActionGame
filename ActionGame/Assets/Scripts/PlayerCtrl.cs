@@ -11,7 +11,7 @@ public class PlayerCtrl : MonoBehaviour {
     public float attackRange = 1.5f;
 
     enum State{
-        Walking, Attacking, Died,
+        Walking, Attacking, Died, Jumping,
     };
 
     //현재 스테이트
@@ -34,6 +34,9 @@ public class PlayerCtrl : MonoBehaviour {
         case State.Attacking:
             Attacking();
             break;
+        case State.Jumping:
+            Jumping();
+            break;
         }
 
         if(state!=nextState){
@@ -44,6 +47,9 @@ public class PlayerCtrl : MonoBehaviour {
                 break;
             case State.Attacking:
                 AttackStart();
+                break;
+            case State.Jumping:
+                JumpStart();
                 break;
             case State.Died:
                 Died();
@@ -59,6 +65,10 @@ public class PlayerCtrl : MonoBehaviour {
         StateStartCommon();
     }
     void Walking(){
+        if(inputManager.isSpaced()){
+            SendMessage("Jump");
+            ChangeState(State.Jumping);
+        }
         if(inputManager.Clicked()){
             Vector2 clickPos = inputManager.GetCursorPosition();
             Ray ray = Camera.main.ScreenPointToRay(clickPos);
@@ -87,6 +97,7 @@ public class PlayerCtrl : MonoBehaviour {
             }
         }
     }
+
     // 공격 스테이트가 시작되기 전에 호출된다.
     void AttackStart(){
         StateStartCommon();
@@ -106,6 +117,19 @@ public class PlayerCtrl : MonoBehaviour {
             ChangeState(State.Walking);
     }
 
+    // 점프 스테이트가 시작되기 전에 호출
+    void JumpStart(){
+        StateStartCommon();
+        stataus.jumping = true;
+    }
+
+    // 점프 중 처리
+    void Jumping(){
+        if(charaAnimation.IsJumped()){
+           ChangeState(State.Walking);
+        } 
+    }
+
     void Died(){
         stataus.died = true;
     }
@@ -123,6 +147,7 @@ public class PlayerCtrl : MonoBehaviour {
     // 스테이트가 시작되기 전에 status를 초기화한다.
     void StateStartCommon(){
         stataus.attacking = false;
+        stataus.jumping = false;
         stataus.died = false;
     }
 }

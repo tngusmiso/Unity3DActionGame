@@ -12,6 +12,7 @@ public class CharacterStatus : MonoBehaviour {
     public string characterName = "Player";
 
     public bool attacking = false;
+    public bool jumping = false;
     public bool died = false;
    
 }

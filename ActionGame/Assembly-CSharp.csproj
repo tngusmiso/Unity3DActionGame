@@ -65,16 +65,16 @@
      <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
      <Compile Include="Assets\Scripts\SearchArea.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/ActionGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/Unity3DActionGame/ActionGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/ActionGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/Unity3DActionGame/ActionGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/ActionGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/Unity3DActionGame/ActionGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/ActionGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/Unity3DActionGame/ActionGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/개발 도구/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -8,8 +8,14 @@ public class InputManager : MonoBehaviour {
 	Vector2 prevPosition;
 	Vector2 delta = Vector2.zero;
 	bool moved = false;
+	bool jumpstate = false;
 
 	void Update(){
+		// 스페이스 바 눌림
+		if(Input.GetKeyDown(KeyCode.Space)){
+			//Debug.Log("스페이스 바");
+			jumpstate = true;
+		}
 
 		// 슬라이드 시작 지점
 		if(Input.GetButtonDown("Fire1")){
@@ -36,18 +42,20 @@ public class InputManager : MonoBehaviour {
 
 		// 커서 위치를 갱신한다.
 		prevPosition = GetCursorPosition();
-
 	}
 
 	// 클릭되었는가
 	public bool Clicked(){
 		if(!moved && Input.GetButtonUp("Fire1")){
-            Debug.Log("클릭");
 			return true;
 		}
-		else
-            Debug.Log("안클릭");
-			return false;
+		else return false;
+	}
+
+	public bool isSpaced(){
+		bool jump = jumpstate;
+		jumpstate = false;
+		return jump;
 	}
 
 	// 슬라이드 할 때 커서 이동
