@@ -18,13 +18,4 @@ public class HpManager : MonoBehaviour {
 	void Update () {
 		hpbar.fillAmount = (float)status.HP / status.MaxHP;
 	}
-
-	public void HandleBar(float HP, float Max){
-		 hpbar.fillAmount = HP/Max;
-	}
-
-	// private float Map (float value, float inMin, float inMax, float outMin,float outMax){
-	// 	return (value - inMin) * (outMax - outMin) / (inMin - inMax) + outMin;
-	// 	// (80 - 0) * (1 - 0) / (100 - 0) + 0
-	// }
 }
