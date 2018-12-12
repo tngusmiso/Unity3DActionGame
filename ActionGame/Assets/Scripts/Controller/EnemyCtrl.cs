@@ -17,6 +17,7 @@ public class EnemyCtrl : MonoBehaviour {
     public Vector3 basePosition;
     // 복수의 아이템을 저장할 수 있는 배열로 한다.
     public GameObject[] dropItemPrefab;
+    public LevelManager levelManager;
 	
 	// 스테이트 종류.
 	enum State {
@@ -35,6 +36,7 @@ public class EnemyCtrl : MonoBehaviour {
         status = GetComponent<CharacterStatus>();
         charaAnimation = GetComponent<CharaAnimation>();
     	characterMove = GetComponent<CharacterMove>(); 
+        levelManager = GameObject.Find("levelManager").GetComponent<LevelManager>();
         // 초기 위치를 저장한다.
         basePosition = transform.position;
         // 대기 시간.
@@ -171,6 +173,7 @@ public class EnemyCtrl : MonoBehaviour {
 
     void Died()
 	{
+        levelManager.kill+=1;
         status.died = true;
         dropItem();
         Destroy(gameObject);

@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\3D Assets\Enemy\StoneMonster\Script\Animation_Test.cs" />
      <Compile Include="Assets\Effect\Black Hole\Script\Demo.cs" />
      <Compile Include="Assets\Effect\Black Hole\Script\FreeCamera.cs" />
      <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
@@ -72,10 +73,13 @@
      <Compile Include="Assets\Scripts\Controller\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Controller\CharacterUI.cs" />
      <Compile Include="Assets\Scripts\Controller\EnemyCtrl.cs" />
+     <Compile Include="Assets\Scripts\Controller\ItemDropController.cs" />
      <Compile Include="Assets\Scripts\Controller\PlayerCtrl.cs" />
+     <Compile Include="Assets\Scripts\Manager\BombGenerator.cs" />
      <Compile Include="Assets\Scripts\Manager\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Manager\HpManager.cs" />
      <Compile Include="Assets\Scripts\Manager\InputManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
      <None Include="Assets\Effect\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
      <None Include="Assets\Effect\Black Hole\ReadMe.txt" />
      <None Include="Assets\3D Assets\Fortress Gate_Free\ReadMe.txt" />

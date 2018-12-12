@@ -98,6 +98,14 @@ public class PlayerCtrl : MonoBehaviour {
         }
     }
 
+    void OnTriggerEnter(Collider other){
+        Debug.Log(other.tag+"");
+        if(other.tag == "bomb"){
+            Debug.Log("bomb");
+            Damage(25);
+        }
+	}
+    
     // 공격 스테이트가 시작되기 전에 호출된다.
     void AttackStart(){
         StateStartCommon();
@@ -136,6 +144,17 @@ public class PlayerCtrl : MonoBehaviour {
 
     void Damage(AttackArea.AttackInfo attackInfo){
         stataus.HP -= attackInfo.attackPower;
+       
+        if(stataus.HP <= 0){
+            stataus.HP = 0;
+
+            //체력이 0이므로 사망 스테이투로 전환
+            ChangeState(State.Died);
+        }
+    }
+
+    void Damage(int power){
+        stataus.HP -= power;
        
         if(stataus.HP <= 0){
             stataus.HP = 0;
