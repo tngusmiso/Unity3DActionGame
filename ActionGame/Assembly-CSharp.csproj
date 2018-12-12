@@ -53,6 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Effect\Black Hole\Script\Demo.cs" />
+     <Compile Include="Assets\Effect\Black Hole\Script\FreeCamera.cs" />
      <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
      <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
      <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -68,12 +70,16 @@
      <Compile Include="Assets\Scripts\Controller\CharaAnimation.cs" />
      <Compile Include="Assets\Scripts\Controller\CharacterMove.cs" />
      <Compile Include="Assets\Scripts\Controller\CharacterStatus.cs" />
+     <Compile Include="Assets\Scripts\Controller\CharacterUI.cs" />
      <Compile Include="Assets\Scripts\Controller\EnemyCtrl.cs" />
      <Compile Include="Assets\Scripts\Controller\PlayerCtrl.cs" />
      <Compile Include="Assets\Scripts\Manager\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Manager\HpManager.cs" />
      <Compile Include="Assets\Scripts\Manager\InputManager.cs" />
      <None Include="Assets\Effect\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+     <None Include="Assets\Effect\Black Hole\ReadMe.txt" />
+     <None Include="Assets\3D Assets\Fortress Gate_Free\ReadMe.txt" />
+     <None Include="Assets\Effect\Black Hole\Shader\Black Hole.shader" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/Unity3DActionGame/ActionGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

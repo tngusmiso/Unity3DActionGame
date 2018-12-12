@@ -6,7 +6,7 @@ public class SearchArea : MonoBehaviour {
 	void Start()
 	{
 		// EnemyCtrl을 미리 준비한다.
-		enemyCtrl = transform.root.GetComponent<EnemyCtrl>();
+		enemyCtrl = transform.parent.GetComponent<EnemyCtrl>();
 	}
 	
 	void OnTriggerStay( Collider other )
