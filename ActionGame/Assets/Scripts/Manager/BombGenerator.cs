@@ -17,8 +17,9 @@ public class BombGenerator : MonoBehaviour {
 	void Awake(){
 		levelManager = GameObject.Find("levelManager").GetComponent<LevelManager>();
 	}
+	
 	void Update(){
-		if(levelManager.level == 3){
+		if(levelManager.level == 3 && levelManager.levelStart){
 			this.delta += Time.deltaTime;
 			if(this.delta>this.span){
 				this.delta = 0;

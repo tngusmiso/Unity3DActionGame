@@ -54,16 +54,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\3D Assets\Enemy\StoneMonster\Script\Animation_Test.cs" />
-     <Compile Include="Assets\Effect\Black Hole\Script\Demo.cs" />
-     <Compile Include="Assets\Effect\Black Hole\Script\FreeCamera.cs" />
-     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
-     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
-     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\GunAim.cs" />
-     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\GunShoot.cs" />
-     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
-     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
-     <Compile Include="Assets\Effect\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-     <Compile Include="Assets\Effect\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\AttackHit\AttackArea.cs" />
      <Compile Include="Assets\Scripts\AttackHit\AttackAreaActivator.cs" />
      <Compile Include="Assets\Scripts\AttackHit\HitArea.cs" />
@@ -79,11 +69,11 @@
      <Compile Include="Assets\Scripts\Manager\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Manager\HpManager.cs" />
      <Compile Include="Assets\Scripts\Manager\InputManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\LevelCollider.cs" />
      <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
-     <None Include="Assets\Effect\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
-     <None Include="Assets\Effect\Black Hole\ReadMe.txt" />
-     <None Include="Assets\3D Assets\Fortress Gate_Free\ReadMe.txt" />
-     <None Include="Assets\Effect\Black Hole\Shader\Black Hole.shader" />
+     <Compile Include="Assets\Scripts\Manager\MonsterGenerator.cs" />
+     <Compile Include="Assets\Scripts\RestartScript.cs" />
+     <None Include="Assets\3D Assets\StoneGate\Fortress Gate_Free\ReadMe.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Users/lim/skhu/2018/2nd/GameProgramming-2018/Unity3DActionGame/ActionGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

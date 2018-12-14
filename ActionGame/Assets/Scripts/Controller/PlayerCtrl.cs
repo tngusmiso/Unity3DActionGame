@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerCtrl : MonoBehaviour {
 
@@ -52,6 +54,7 @@ public class PlayerCtrl : MonoBehaviour {
                 JumpStart();
                 break;
             case State.Died:
+                Invoke("GoToEndScene",1);
                 Died();
                 break;
             }
@@ -147,7 +150,7 @@ public class PlayerCtrl : MonoBehaviour {
        
         if(stataus.HP <= 0){
             stataus.HP = 0;
-
+            
             //체력이 0이므로 사망 스테이투로 전환
             ChangeState(State.Died);
         }
@@ -158,7 +161,6 @@ public class PlayerCtrl : MonoBehaviour {
        
         if(stataus.HP <= 0){
             stataus.HP = 0;
-
             //체력이 0이므로 사망 스테이투로 전환
             ChangeState(State.Died);
         }
@@ -169,5 +171,9 @@ public class PlayerCtrl : MonoBehaviour {
         stataus.attacking = false;
         stataus.jumping = false;
         stataus.died = false;
+    }
+
+    void GoToEndScene(){
+        SceneManager.LoadScene("GameOver");
     }
 }

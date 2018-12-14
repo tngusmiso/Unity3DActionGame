@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EnemyCtrl : MonoBehaviour {
 	CharacterStatus status;
@@ -71,6 +72,8 @@ public class EnemyCtrl : MonoBehaviour {
 				AttackStart();
 				break;
             case State.Died:
+                if(gameObject.tag == "Dragon")
+                    GoToClearScene();
                 Died();
                 break;
             }
@@ -199,5 +202,8 @@ public class EnemyCtrl : MonoBehaviour {
     public void SetAttackTarget(Transform target)
     {
         attackTarget = target;
+    }
+    void GoToClearScene(){
+        SceneManager.LoadScene("EndGame");
     }
 }
